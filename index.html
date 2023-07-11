@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title></title>
+    <style type="text/css">
+        @font-face {
+            font-family: 'Martel Bold';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Martel Bold'), url('https://cdn.shopify.com/s/files/1/0277/9755/3197/t/78/assets/Martel-Bold.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'Martel SemiBold';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Martel SemiBold'), url('https://cdn.shopify.com/s/files/1/0277/9755/3197/t/78/assets/Martel-SemiBold.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'Martel Regular';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Martel Regular'), url('Martel-Regular.woff') format('woff');
+        }
+
+        .dektop {
+            display: none;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+
+
+
+        @font-face {
+            font-family: 'klemer';
+            src: url(https://cdn.shopify.com/s/files/1/0277/9755/3197/files/KlemerDisplayDemoRegular.ttf?v=1645971352);
+        }
+
+        .p-0 {
+            padding: 0;
+        }
+
+        ul.nav.nav-tabs {
+            border: 0px;
+            display: block;
+            margin: 0 auto;
+            width: 467px;
+            position: absolute;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            z-index: 9;
+            top: 50px;
+        }
+
+        .nav-tabs>li.active>a,
+        .nav-tabs>li.active>a:focus,
+        .nav-tabs>li.active>a:hover {
+            border: 0px;
+            color: #FFFFFF;
+
+        }
+
+        .nav-tabs>li.active>a,
+        .nav-tabs>li.active>a:focus,
+        .nav-tabs>li.active>a:hover {
+            background: none;
+        }
+
+        .nav-tabs>li>a:hover {
+            border-color: none;
+            background: none;
+            text-decoration: underline;
+        }
+
+        .nav-tabs>li>a {
+            margin-right: 2px;
+            line-height: 1.42857143;
+            border: 0px;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .nav-tabs>li>a {
+            color: #FFFFFF;
+        }
+
+        .nav-tabs {
+            font-family: 'Work Sans';
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 23px;
+            letter-spacing: 0em;
+        }
+
+        /* banner yoga style start */
+
+        .activity-banner {
+            margin: 0px;
+            position: relative;
+        }
+
+        .text-wrap {
+            position: absolute;
+            bottom: 75px;
+            left: 85px;
+        }
+
+        .casual-con .text-wrap {
+            bottom: 150px;
+        }
+
+        .activity-banner h2 {
+            margin: 0px;
+            font-family: 'Nevada-Serial-Light';
+            font-size: 97px;
+            font-weight: 400;
+            line-height: 114px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #FFFFFF;
+        }
+
+        .activity-banner p {
+            font-family: 'Work Sans';
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 38px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #FFFFFF;
+        }
+
+        .yoga-con {
+            background-image: url('images/yoga.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        /* banner yoga style close */
+
+        /* banner casual style start */
+        .casual-con {
+            background-image: url('images/casual.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 941px;
+        }
+
+        /* casual banner style close */
+        /* running banner style start */
+        .run-con {
+            background-image: url('images/running.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        /* running banner style close */
+        /* workout banner style start */
+        .wrk-con {
+            background-image: url('images/workout.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        /* workout style close */
+
+        /* swiming Banner style start */
+
+        .swiming-banner {
+            margin: 0px;
+            position: relative;
+        }
+
+        .text1-wrap {
+            position: absolute;
+            right: 55px;
+            top: 120px;
+            width: 50%;
+        }
+
+        .ban3-con {
+            background-image: url('images/swiming.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 865px;
+        }
+
+        .ban3-con h2 {
+            margin: 25px 0;
+            font-family: 'Work Sans';
+            font-size: 35px;
+            font-weight: 200;
+            line-height: 75px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #FFFFFF;
+        }
+
+        .ban3-con p {
+            font-family: 'Work Sans';
+            font-size: 35px;
+            font-weight: 100;
+            line-height: 35px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #FFFFFF;
+        }
+
+        .swngimg-con h3 {
+            display: inline-block;
+            margin: 50px 0px;
+            font-family: 'Work Sans';
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 53px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #FFFFFF;
+            padding-right: 30px;
+        }
+
+        .swngimg-con img {
+            width: 200px;
+            margin-top: -12px;
+        }
+
+        /* swiming banner style end */
+
+        /* sustain banner style start */
+
+        .sustain-banner {
+            margin: 0px;
+            position: relative;
+        }
+
+        .sustain-con {
+            background-image: url('images/sustain-banner.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 865px;
+        }
+
+        .sus-wrap {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+
+        .sustain-con h2 {
+            font-family: 'Work Sans';
+            font-size: 65px;
+            font-weight: 400;
+            line-height: 110px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #FFFFFF;
+        }
+
+        .sustain-con .disc-pri {
+            font-family: 'Work Sans';
+            font-size: 25px;
+            font-weight: 400;
+            line-height: 60px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #FFFFFF;
+            position: relative;
+        }
+
+        .disc1 {
+            margin-left: 30px;
+        }
+
+        .percentag {
+            margin-left: 30px;
+        }
+
+        .sus-arrow {
+            position: absolute;
+            top: 460px;
+        }
+
+        .sus-arrow h3 {
+            font-family: 'Work Sans';
+            font-size: 45px;
+            font-weight: 400;
+            line-height: 53px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #FFFFFF;
+            display: inline-block;
+        }
+
+        .sus-arrow img {
+            width: 380px;
+            padding-left: 30px;
+            margin-top: -12px;
+        }
+
+        /* sustain banner style end */
+
+        .head-4 {
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .head-4 h2 {
+            display: inline-block;
+            font-family: 'Work Sans';
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: center;
+            padding: 35px;
+        }
+
+        .mg-6 {
+            margin: 0px;
+        }
+
+        .onlyimg img {
+            width: 100%;
+        }
+
+        .cont-price {
+            margin-top: 30px;
+        }
+
+        .cont-price h3 {
+            font-family: 'Work Sans';
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: center;
+        }
+
+        .cont-price h5 {
+            font-family: 'Work Sans';
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: center;
+
+        }
+
+        /* tablet */
+
+        @media screen and (max-width: 1100px) {
+
+            /* tablet style swiming banner */
+
+            .ban3-con {
+                background-image: url('images/cloth-ipad.png');
+                background-repeat: no-repeat;
+            }
+
+            .text1-wrap {
+                position: absolute;
+                left: 50px;
+                top: 330px !important;
+            }
+
+            .ban3-con p {
+                font-family: 'Work Sans';
+                font-size: 25px;
+                font-weight: 100;
+                line-height: 35px !important;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #FFFFFF;
+            }
+
+            /* tablet swiming banner style end */
+
+            /* sustain banner style for tab start */
+
+            .sustain-con {
+                background-image: url('images/sustain-tablet.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100vh;
+                background-position: right;
+            }
+
+            .sus-wrap {
+                position: absolute;
+                top: 40px;
+                left: 60px;
+                padding: 9px;
+            }
+
+            .sustain-con h2 {
+                font-size: 44px;
+                line-height: 186px;
+            }
+
+            .sustain-con .disc-pri {
+                font-size: 23px;
+                line-height: 56px;
+            }
+
+            .sus-arrow h3 {
+                font-size: 30px;
+                line-height: 230px;
+            }
+
+            .sus-arrow img {
+                width: 300px;
+            }
+
+            /* sustain banner style for tab end */
+
+        }
+
+
+        /* mobile */
+        @media screen and (max-width: 767px) {
+
+            /* moblie swiming banner style start */
+
+            .ban3-con {
+                background-image: url('images/swimingmobile.png');
+                background-repeat: no-repeat;
+                height: 700px;
+                background-size: contain;
+                padding: 50px;
+            }
+
+            .text1-wrap {
+                width: 100%;
+                position: static;
+            }
+
+            .text1-wrap h2 {
+                width: 50%;
+                font-size: 40px;
+                line-height: 52px;
+            }
+
+            .ban3-con p {
+                position: absolute;
+                bottom: 100px;
+                font-size: 22px;
+                line-height: 25px !important;
+                width: 80%;
+                left: 46px;
+            }
+
+            .swngimg-con {
+                display: none;
+            }
+
+            .swngimg-con img {
+                width: 100px;
+                margin-top: -12px;
+            }
+
+            .dektop {
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            /* moblie swiming banner style end */
+
+            /* sustain banner tyle for mobile start */
+
+            .sustain-con {
+                background-image: url('images/sustain-mobile.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 823px;
+                width: 430px;
+            }
+
+            .sus-wrap {
+                top: 44px;
+
+            }
+
+            .sustain-con h2 {
+                font-size: 40px;
+                line-height: 60px;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .sustain-con .disc-pri {
+                font-size: 23px;
+                line-height: 32px;
+
+            }
+
+            span.head {
+                display: block;
+                text-align: center;
+            }
+
+            .disc1 {
+                display: block;
+                text-align: center;
+            }
+
+            .percentag {
+                display: block;
+                text-align: center;
+            }
+
+            .sus-arrow {
+                position: absolute;
+                top: 550px;
+            }
+
+
+            .sus-arrow h3 {
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            .sus-arrow img {
+                width: 165px;
+                height: 16px;
+            }
+
+            /* sustain banner tyle for mobile end */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- tabs -->
+    <div>
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#yoga" aria-controls="yoga" role="tab"
+                    data-toggle="tab">YOGA</a></li>
+            <li role="presentation"><a href="#casual" aria-controls="casual" role="tab" data-toggle="tab">CASUAL</a>
+            </li>
+            <li role="presentation"><a href="#running" aria-controls="running" role="tab" data-toggle="tab">RUNNING</a>
+            </li>
+            <li role="presentation"><a href="#workout" aria-controls="workout" role="tab" data-toggle="tab">WORKOUT</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="yoga">
+
+                <!-- YOGA CONTAINER -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 p-0">
+                            <div class="activity-banner">
+                                <div class="yoga-con">
+                                    <div class="text-wrap">
+                                        <h2>yoga</h2>
+                                        <p>BREATHABLE, FLEXILE SETS THAT MOVE </p>
+                                        <p>WITH YOUR EVERY FLOW.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core1.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CORE LEGGING BLACK</h3>
+                                    <H5>$74.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core2.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CORE LEGGING RIAD</h3>
+                                    <H5>$74.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core3.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CORE CROP TOP LONG SLEEVE AVORIO</h3>
+                                    <H5>$70.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core4.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CROSSED BACK TOP BLACK</h3>
+                                    <H5>$61.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core5.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CORE TOP RIAD</h3>
+                                    <H5>$66.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core3.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>SHOULDER NACKED TOP BLACK</h3>
+                                    <H5>$60.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="casual">
+                <!-- CASUAL CONTAINER -->
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 p-0">
+                            <div class="activity-banner">
+                                <div class="casual-con">
+                                    <div class="text-wrap">
+                                        <h2>casual</h2>
+                                        <p>COZY TEXTILES YOU’LL WANT TO LIVE IN-</p>
+                                        <p> FROM MORNING ERRANDS TO MOVIE NIGHTS.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core1.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CORE LEGGING BLACK</h3>
+                                    <H5>$74.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core2.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CORE LEGGING RIAD</h3>
+                                    <H5>$74.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core3.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CORE CROP TOP LONG SLEEVE AVORIO</h3>
+                                    <H5>$70.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core4.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CROSSED BACK TOP BLACK</h3>
+                                    <H5>$61.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core5.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CORE TOP RIAD</h3>
+                                    <H5>$66.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core3.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>SHOULDER NACKED TOP BLACK</h3>
+                                    <H5>$60.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sustain Banner -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="sustain-banner">
+                                <div class="sustain-con">
+                                    <div class="sus-wrap">
+                                        <h2>SUSTAINABILITY REPORT</h2>
+                                        <p class="disc-pri">
+                                            <span class="head">PLANET</span>
+                                            <span class="disc1">Best environmental initiatives</span>
+                                            <span class="percentag">61.25%</span>
+                                        </p>
+                                        <p class="disc-pri">
+                                            <span class="head">PEOPLE</span>
+                                            <span class="disc1">Best social & ethical initiatives</span>
+                                            <span class="percentag">71.25%</span>
+                                        </p>
+                                        <p class="disc-pri">
+                                            <span class="head">TRANSPARENCY</span>
+                                            <span class="disc1">Best traceable initiatives</span>
+                                            <span class="percentag">75.00%</span>
+                                        </p>
+                                        <div class="sus-arrow">
+                                            <h3>LEARN MORE </h3>
+                                            <img src="images/Arrow 1.png" alt="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="running">
+                <!-- running containe -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 p-0">
+                            <div class="activity-banner">
+                                <div class="run-con">
+                                    <div class="text-wrap">
+                                        <h2>running</h2>
+                                        <p>FAST, FIT, & FLEXIBLE RUNNING SETS THAT WILL</p>
+                                        <p>STAY SNUG FOR LIGHT JOGS OR MARATHONS.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core1.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CORE LEGGING BLACK</h3>
+                                    <H5>$74.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core2.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CORE LEGGING RIAD</h3>
+                                    <H5>$74.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core3.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CORE CROP TOP LONG SLEEVE AVORIO</h3>
+                                    <H5>$70.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- swiming Banner -->
+                    <div class="swiming-banner">
+                        <div class="ban3-con">
+                            <div class="text1-wrap">
+                                <h2>RECYCLED FABRICS</h2>
+                                <p>The ECONYL® Regeneration System starts
+                                    with rescuing waste, like fishing nets, fabric
+                                    scraps, carpet flooring and industrial plastic
+                                    from landfills and oceans all over the world.
+                                    That waste is then sorted and cleaned to
+                                    recover all of the nylon possible.</p>
+
+                                <div class="swngimg-con">
+                                    <h3>LEARN MORE </h3>
+                                    <img src="images/Arrow 1.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core4.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CROSSED BACK TOP BLACK</h3>
+                                    <H5>$61.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core5.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CORE TOP RIAD</h3>
+                                    <H5>$66.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core3.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>SHOULDER NACKED TOP BLACK</h3>
+                                    <H5>$60.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="workout">
+                <!-- workout container -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 p-0">
+                            <div class="activity-banner">
+                                <div class="wrk-con">
+                                    <div class="text-wrap">
+                                        <h2>workout</h2>
+                                        <p>HIT THE GYM WITH DEPENDABLE TEXTILES-</p>
+                                        <p>SLEEK, SNUG, & READY FOR ANY TYPE OF <br> WORKOUT.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core1.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CORE LEGGING BLACK</h3>
+                                    <H5>$74.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core2.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CORE LEGGING RIAD</h3>
+                                    <H5>$74.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core3.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CORE CROP TOP LONG SLEEVE AVORIO</h3>
+                                    <H5>$70.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core4.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CROSSED BACK TOP BLACK</h3>
+                                    <H5>$61.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core5.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>CORE TOP RIAD</h3>
+                                    <H5>$66.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mg-6">
+                                <div class="onlyimg">
+                                    <img src="images/core3.png" alt="">
+                                </div>
+                                <div class="cont-price">
+                                    <h3>SHOULDER NACKED TOP BLACK</h3>
+                                    <H5>$60.00</H5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- header close -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+    </script>
+</body>
+
+</html>
